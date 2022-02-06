@@ -1,0 +1,666 @@
+/**
+*
+* -----------------------------------------------------------------------------
+*
+* Template : Treva
+* Author : Anil kumar
+* Author URI : https://anil.com/
+*
+* ------------------------------------------------
+*
+**/
+/* Table Of Content
+---------------------------------------------------------
+01. General CSS Here 
+02. Common Theme CSS Here 
+03. Header Section CSS Here
+04. Hero Section CSS Here
+05. Product Section CSS Here
+**/
+
+/**CSS variables***/
+:root {
+    --tre-green: #00BA74;
+    --tre-blue: #2783F3;
+  }
+
+  /* html{
+      set 1rem = 16px::Root font size
+       font-size:16px; 
+  } */
+
+
+
+
+/* Fonts */
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../fonts/hkgrotesk-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/hkgrotesk-extrabold-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../fonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
+         url('../fonts/hkgrotesk-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../fonts/hkgrotesk-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/hkgrotesk-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../fonts/hkgrotesk-medium-webfont.woff2') format('woff2'),
+         url('../fonts/hkgrotesk-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../fonts/hkgrotesk-regular-webfont.woff2') format('woff2'),
+         url('../fonts/hkgrotesk-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+body{
+    font-family: 'hk_grotesk' Arial;
+
+
+    
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    font-weight: 700;
+}
+.tre-icons{
+    font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+p{
+    color: #4F5659;
+}
+a{
+    text-decoration: none;
+}
+label{
+    /* QUANTITY */
+font-style: normal;
+font-weight: 400;
+font-size: .75rem;
+line-height: 19px;
+/* identical to box height, or 158% */
+text-transform: uppercase;
+
+color: #939C9F;
+
+
+}
+/***Button and radio,checkbox styles***/
+
+/**add to bag button big ****/
+.tre-primary-btn{
+    background: var(--tre-green);
+    border-radius: 4px;
+    border: 0;
+    /**height from figma**/
+    height: 4.5rem;
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+}
+.tre-primary-btn .material-icons{
+ position: relative;
+ top: 4px;
+}
+/**Radio button style***/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 2.0625rem;
+    cursor: pointer;
+    line-height: 1.25rem;
+    display: inline-block;
+    color: #666;
+    text-transform: initial;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #D6DFE1;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:before{
+    border-color: var(--tre-green) !important;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: .75rem;
+    height: .75rem;
+    background: var(--tre-green);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.tre-radio-btn{
+    margin-bottom: 1.125rem;
+    
+}
+.help-small{
+    font-size: 1rem !important;
+    color: #545C5F !important;
+}
+.tre-radio-btn label{
+    font-weight: 600 !important;
+    font-size: 1rem;
+    line-height: 1.375rem !important;
+    color: #202324 !important;
+}
+.tre-radio-btn .tex-green{
+    color: var(--tre-green);
+}
+.tre-radio-btn  span{
+   
+    color: #202324;
+}
+.tre-radio-btn  span.tre-g-tag{
+    color: #000000;
+    background: #B1FBE3;
+    padding: .125rem .5rem;
+    font-weight: bold;
+    font-style: italic;
+    display: inline-block;
+    border-radius:1rem;
+    font-size: .75rem;
+    width: 4.0625rem;
+    height: 1rem;
+    line-height: .75rem;
+}
+.tre-radio-btn .tre-radio-sub-text {
+    font-size: .8125rem;
+    color: #202324;
+    padding-left: 2.0625rem;
+}
+
+
+
+
+
+
+
+/**Radio button style::END***/
+
+
+
+.th-primary-btn{
+    background-color: #2783F3;
+    color: #fff;
+    font-weight: 700;
+    padding: 0rem 1.125rem;
+    border-radius: 2px;
+    height: 2.625rem;
+    display: inline-flex;
+    align-items: center;
+}
+.th-primary-btn:hover{
+    background-color: #265eb8;
+    color: #fff;
+}
+.tre-header .nav-item .th-secondary-btn{
+    background-color: #fff;
+    color: #528FF0 !important;
+    font-weight: 700;
+    padding: 0px 20px !important;
+    border-radius: 2px;
+    border:1px solid #EDEDED;
+    height:2.625rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700 !important;
+}
+.tre-header .nav-item .th-secondary-btn:hover{
+    background: #528FF0 !important;
+    border-color:#528FF0 ;
+    color: #fff !important;
+}
+.th-ghost-btn{
+    background-color: #030F3F;
+    color: #fff;
+    font-weight: 700 !important;
+    padding: 0px 20px;
+    border-radius: 2px;
+    border:1px solid #2B83EA;
+    height: 2.625rem;
+    display: inline-flex;
+    align-items: center;
+}
+.th-ghost-btn:hover{
+    background:#2B83EA ;
+}
+/* 3 */
+.tre-header{
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 100%;
+    z-index: 1;
+}
+
+.tre-header .nav-item a{
+    font-size: .9375rem;
+    font-weight: 400;
+    color: #fff;
+    padding-right: 2rem !important;
+    white-space: nowrap;
+}
+.tre-header .navbar-nav{
+    margin-left: 5rem;
+}
+.tre-header .navbar-nav-left a:hover{
+    color: #2783f3;
+}
+.tre-header .navbar-right{
+    margin-left: auto !important;
+}
+.tre-header .navbar-right li.nav-item{
+    margin-left: 1rem;
+}
+.tre-header form a{
+    margin-left: 1.0625rem;
+}
+.tre-header .navbar{
+    padding: 0;
+}
+.tre-header .container-header{
+    width: 100%;
+}
+.navbar-toggler{
+    border-color:#fff  !important ;
+}
+.navbar-toggler svg{
+    fill: #fff;
+}
+
+/* 4 */
+.tre-hero-section{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 88% 95%, 49% 87%, 0% 75%);
+    background-color: #03062F;
+    padding: 8.4375rem 0 17.1875rem 0;
+    position: relative;
+}
+.tre-hero-content {
+    padding-right: 9.375rem;
+}
+.tre-hero-content h1{
+    font-weight: 900;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 3.3125rem;
+    position: relative;
+    padding-bottom:2.8125rem;
+    margin-bottom: 2.1875rem;
+}
+.tre-hero-content h1:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1.5rem;
+    height: .25rem;
+    background-color: #58C19C;
+}
+.tre-hero-content p{
+    font-size: 1.125rem;
+    color: #B3B4C1;
+    line-height:1.75rem;
+    margin-bottom: 2.1875rem;
+    width: 73%;
+}
+.product-section{
+    margin-top:9.75rem;
+}
+
+.tre-product-slider{
+    margin-top: 5rem;
+    padding-right: 3.75rem;
+}
+.dots-img{
+  position: relative;
+  margin-top: -15.75rem;
+  z-index: -1;
+}
+.tre-product-slider .mySwiper2 .swiper-slide {
+    text-align: center;
+}
+.tre-product-slider .swiper-button-next:after, .tre-product-slider .swiper-button-prev:after{
+    content: none;
+}
+.tre-product-slider .swiper-button-next, .tre-product-slider .swiper-button-prev{
+    width: 3rem;
+    height: 3rem;
+    background-color: #F4F6F6;
+    border-radius: 3.125rem;
+}
+.tre-product-slider .mySwiper .swiper-slide img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 4px;
+    border:1px solid transparent;
+}
+.tre-product-slider .mySwiper .swiper-slide-thumb-active img{
+    border:1px solid #D1D1D1;
+}
+.tre-product-slider .mySwiper{
+    margin-top: 1.875rem;
+}
+.tre-product-content h2{
+    font-size: 40px;
+    line-height: 53px;
+    color: #222323;
+    font-weight: 700;
+
+}
+.tre-product-content p{
+    color: #4F5659;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    margin-bottom: 2.1875rem;
+}
+.tre-product-content .tre-rating figure{
+    margin: 0;
+}
+.tre-product-content .tre-rating {
+    display: flex;
+    align-items: center;
+}
+.tre-product-content .tre-rating span{
+    color: #202324;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding-left: .625;
+}
+.tre-product-content .tre-pro-color{
+    margin-top: 2.1875rem;
+}
+.tre-product-content .tre-pro-color >label{
+    font-weight: 600;
+    color: #939C9F;
+    font-size: .75rem;
+}
+.tre-product-content .tre-pro-color ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tre-product-content .tre-pro-color ul li{
+    width: calc(25% - 24px);
+    margin: 8px 8px 0px 0;
+    border-radius: 6px;
+    border: 1px solid #D8E0E2;
+    display: flex;
+    position: relative;
+    height: 60px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 120px;
+}
+.tre-product-content .tre-pro-color ul li:hover{
+    border-color:#202324; 
+}
+.tre-product-content .tre-pro-color ul li *{
+    cursor: pointer;
+}
+.red-label{
+    background-color: #DE742D;
+}
+.blue-label{
+    background-color: #A07EDC;
+}
+.tre-product-content .tre-pro-color ul li span{
+    height: 16px;
+    left: 0;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 100%;
+    position: absolute;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.tre-product-content .tre-pro-color ul li label{
+    color: #545C5F;
+    font-size: 13px;
+    line-height: 16px;
+    padding:0 15px;
+    margin-top: 10px;
+}
+.tre-product-content .tre-pro-color ul li.active{
+    border: 2px solid #202324;
+
+}
+.tre-product-content .tre-pro-color ul li.active label{
+    color: #202324;
+    font-weight: 600;
+}
+.tre-product-content .tre-quantity label{
+    font-weight: 600;
+    color: #939C9F;
+    font-size: .75rem;
+}
+.tre-product-content .tre-quantity {}
+.tre-product-content .tre-quantity .qty {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.tre-product-content .tre-quantity .qty label {
+    flex: 1 0 100%;
+  }
+  .tre-product-content .tre-quantity .qty input {
+    width: 2.5rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    border: none;
+  }
+  .tre-product-content .tre-quantity .qty button {
+    width: 2.5rem;
+    height: 3rem;
+    color: #8CA4AB;
+    font-size: 1.2rem;
+    background: #EDF1F2;
+    border: none;
+    border-radius: 4px;
+    line-height: 0;
+  }
+  .tre-product-content .tre-quantity .qty button.qtyminus {
+    margin-right: 0.3rem;
+  }
+  .tre-product-content .tre-quantity .qty button.qtyplus {
+    margin-left: 0.3rem;
+  }
+  .tre-feature-listing{
+      list-style: none;
+      
+      padding: 0;
+  }
+  .tre-feature-listing li{
+      font-size:1rem;
+      color:#34393A;
+      line-height: 1.5rem;
+      margin-bottom: .75rem;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+  }
+  .tre-feature-listing li .material-icons{
+      font-size: 1.25rem;
+      color: var(--tre-green);
+      margin-right: 6px;
+  }
+.tre-info-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: #545C5F;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.tre-info-text .material-icons{
+    color: #889295;
+}
+.tre-info-text b{
+    font-weight: 600;
+    margin-left: .5rem;
+    border-bottom: 1px solid #545C5F;
+}
+
+
+  @media only screen and (max-width: 991px) {
+    .navbar-collapse{
+        background: #15181a;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        position: relative;
+        top: 1rem;
+    }
+    .navbar-collapse.navbar-nav{
+        margin-left: 0;
+    }
+    .navbar-collapse  .navbar-right .nav-item{
+        margin-left:0 !important ;
+        margin-bottom: 1rem;
+    }
+    .tre-header .navbar-nav{
+        margin-left: 0;
+    }
+    .tre-header .nav-item a{
+        margin: 1rem 0;
+    }
+    .tre-header .navbar-right .nav-item a{
+        margin:0;
+    }
+    .tre-hero-section{
+        clip-path:none;
+        padding: 8.4375rem 0 10.625rem 0;
+    }
+    .tre-hero-pic{
+        margin-top: 4rem;
+    }
+    .product-section{
+        margin-top: 0;
+    }
+  }
+  @media only screen and (max-width:768px) {
+    .tre-hero-section{
+        padding-top: 5rem;
+        padding-bottom: 3.125rem;
+    }
+    .tre-product-slider{
+        padding-right: 0;
+        margin-top: 0;
+    }
+    .tre-hero-content{
+        padding-right: 0;
+    }
+    
+    .swiper-thumbs{
+        overflow: auto;
+    }
+    .swiper-backface-hidden .swiper-slide,.tre-product-slider .mySwiper .swiper-slide img{
+       width: 100%;
+       height: auto !important;
+    }
+    .tre-product-content .tre-pro-color ul li{
+        width: 100%;
+    }
+    .tre-info-text{
+        flex-direction: column;
+    }
+  }
