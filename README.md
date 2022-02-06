@@ -1,6 +1,8 @@
-Framework: Bootstrap v5.13https://getbootstrap.com/
+Framework: Bootstrap v5.13
+https://getbootstrap.com/
 
-Slider plugin: Swiper-bundlehttps://swiperjs.com/
+Slider plugin: Swiper-bundle
+https://swiperjs.com/
 
 Icons: Google Materialhttps://fonts.google.com/icons
 
@@ -10,4 +12,5 @@ https://animate.style/
 Javascript lib--------------Bootstrap popper.min.js(boostrap)
 Jqueryhttps://code.jquery.com/jquery-3.6.0.js
 
-Animate on scrolling: jquery.scrolla.min.jshttps://maximzhurkin.github.io/jquery-scrolla/
+Animate on scrolling: jquery.scrolla.min.js
+https://maximzhurkin.github.io/jquery-scrolla/
