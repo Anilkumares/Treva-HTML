@@ -13,7 +13,8 @@ https://animate.style/
 Javascript lib
 -------------
 Bootstrap popper.min.js(boostrap)
-Jqueryhttps://code.jquery.com/jquery-3.6.0.js
+Jquery
+https://code.jquery.com/jquery-3.6.0.js
 
 Animate on scrolling: jquery.scrolla.min.js
 https://maximzhurkin.github.io/jquery-scrolla/
